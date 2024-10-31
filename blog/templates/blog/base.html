@@ -32,7 +32,7 @@
             <div class="navbar-nav ms-auto">
               {% if user.is_authenticated %}
               <span class="nav-item nav-link">Hello, {{ user.username }}!</span>
-              <a class="nav-item nav-link" href="{ url 'post-create' %}">New Post</a>
+              <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
               <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
               <form method="POST" action="{% url 'logout' %}" class="form-inline nav-item">
                   {% csrf_token %}
